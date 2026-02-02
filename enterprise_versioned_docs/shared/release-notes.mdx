@@ -334,10 +334,12 @@
 * **[AI Rate Limiting](https://docs.api7.ai/hub/ai-rate-limiting)**
   * 支持在 `limit` 和 `time_window` 字段中使用变量语法。
   * 添加了一个 `rules` 字段，用于同时配置多个限流规则。
+* **[AI Proxy](https://docs.api7.ai/hub/ai-proxy)**/**[AI Proxy Multi](https://docs.api7.ai/hub/ai-proxy-multi)**/**[AI Request Rewrite](https://docs.api7.ai/hub/ai-request-rewrite)**
+  * 支持 `aimlapi` 供应商.
 * **[OpenAPI to MCP](https://docs.api7.ai/hub/openapi-to-mcp)**
   * 在向上游服务发送请求时，考虑 OpenAPI 中定义的查询参数默认值。
-* **所有日志记录插件**
-  * 支持配置批处理器中的最大待处理条目数。
+* **所有访问日志记录插件**
+  * 支持配置 `max_pending_entries`，即批处理器中的最大待处理条目数。
   * 在工作进程退出前将待处理日志写入日志服务。
 
 #### 控制面 {#3817-新功能-控制面}
@@ -350,8 +352,6 @@
 
 * **[AI Proxy Multi](https://docs.api7.ai/hub/ai-proxy-multi)**
   * 修复问题：多个 worker 无法共享 AI 实例的健康检查器。
-* **[AI Request Rewrite](https://docs.api7.ai/hub/ai-request-rewrite)**
-  * 修复问题：`aimlapi` provider 类型无法正常工作。
 
 #### 控制面 {#3817-缺陷修复-控制面}
 
